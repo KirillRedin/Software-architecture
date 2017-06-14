@@ -1,0 +1,49 @@
+Warning: This document appears to be written in Ukrainian. Consider adding lang="uk" (or variant) to the html start tag.
+From line 1, column 16; to line 2, column 6
+TYPE html>↩<html>↩<!--М
+For further guidance, consult Declaring the overall language of a page and Choosing language tags.
+If the HTML checker has misidentified the language of this document, please file an issue report or send e-mail to report the problem.
+Error: Text not allowed in element iframe in this context.
+From line 54, column 3; to line 54, column 4
+="300">↩		<p>Ваш б
+Content model for element iframe:
+Text that conforms to the requirements given in the prose.
+Error: Text not allowed in element iframe in this context.
+From line 54, column 5; to line 54, column 44
+300">↩		<p>Ваш браузер не підтримує елементи HTML5</p>↩	
+Content model for element iframe:
+Text that conforms to the requirements given in the prose.
+Error: Text not allowed in element iframe in this context.
+From line 54, column 45; to line 54, column 47
+енти HTML5</p>↩	</i
+Content model for element iframe:
+Text that conforms to the requirements given in the prose.
+Error: Text not allowed in element iframe in this context.
+From line 54, column 48; to line 55, column 1
+и HTML5</p>↩	</ifra
+Content model for element iframe:
+Text that conforms to the requirements given in the prose.
+Error: The width attribute on the table element is obsolete. Use CSS instead.
+From line 126, column 2; to line 126, column 31
+ики</h3>↩	<table width="400" border="2">↩		<ca
+Error: The border attribute on the table element is obsolete. Use CSS instead.
+From line 126, column 2; to line 126, column 31
+ики</h3>↩	<table width="400" border="2">↩		<ca
+Error: The name attribute on the option element is obsolete. Use the id attribute instead.
+From line 192, column 5; to line 192, column 51
+lect>↩				<option name="Category" value="Guest" selected>Гість<
+Error: The name attribute on the option element is obsolete. Use the id attribute instead.
+From line 193, column 5; to line 193, column 48
+tion>↩				<option name="Category" value="Registrated">Зареєс
+Error: The name attribute on the option element is obsolete. Use the id attribute instead.
+From line 194, column 5; to line 194, column 44
+tion>↩				<option name="Category" value="Premium">Преміу
+Warning: The date input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.
+From line 199, column 4; to line 199, column 41
+у:<br>↩			<input type="date" name="RequestDate"><br>↩	
+Error: Named character reference was not terminated by a semicolon. (Or & should have been escaped as &amp;.)
+At line 209, column 17
+	<summary>&copy Редін, 2017</s
+Error: Bad value mailto: redinkirill.ua@gmail.com for attribute href on element a: Illegal character in scheme data: space is not allowed.
+From line 214, column 2; to line 214, column 44
+etails>↩↩	<a href="mailto: redinkirill.ua@gmail.com">Напиші

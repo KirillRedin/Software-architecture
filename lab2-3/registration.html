@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Реєстрація</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+   	<link href="https://fonts.googleapis.com/css?family=Oswald|PT+Sans+Narrow" rel="stylesheet">
+   	<meta charset="utf-8">
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  	<style type="text/css">
+  		h1, h3, figcaption {
+  			font-family: PT Sans Narrow;
+  		}
+
+  		figcaption {
+  			font-size: 16px;
+  		}
+
+  		body {
+  			padding-top: 40px;
+  		}
+  	</style>
+</head>
+<body>
+	<nav class="navbar navbar-custom navbar-fixed-top">
+		<div class="container">
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="">Головна</a>
+					</li>
+					<li>
+						<a href="#Info">Про нас</a>
+					</li>
+					<li class="active">
+						<a href="">Реєстрація</a>
+					</li>
+					<li>
+						<a href="">Вхід</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="jumbotron text-center">
+		<h1>Реєстрація</h1>
+	</div>
+	<div class="container text-center">
+		<form class="form-horizontal" onsubmit="return validatePass()">
+			<div class="form-group">
+				<label class="control-label col-sm-5 " for="firstname">Ім'я: </label>
+				<div class="col-sm-3">
+					<input type="username" class="form-control" id="firstname" placeholder="Введіть ім'я" name="firstname" pattern="[А-Яа-яA-Za-z]{1,20}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-5 " for="lastname">Прізвище: </label>
+				<div class="col-sm-3">
+					<input type="username" class="form-control" id="lastname" placeholder="Введіть врізвище" name="lastname" pattern="А-Яа-яA-Za-z]{1,20}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-5 " for="nickname">Нікнейм: </label>
+				<div class="col-sm-3">
+					<input type="username" class="form-control" id="nickname" placeholder="Введіть нікнейм" name="nickname" pattern="[A-Za-z0-9]{3,10}" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-5 " for="email">Email: </label>
+				<div class="col-sm-3">
+					<input type="email" class="form-control" id="email" placeholder="Введіть email" name="email" required>
+				</div>
+			</div>	
+			<div class="form-group">
+				<label class="control-label col-sm-5 " for="email">Телефон: </label>
+				<div class="col-sm-3">
+					<input type="phone" class="form-control" id="phone" placeholder="Введіть номер" name="phone" pattern="\+[0-9]{1,3}[0-9]{3}[0-9]{7}" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-5" for="date">Дата народження: </label>				
+				<div class="col-sm-3">
+					<input type="date" name="date" class="form-control" id="date" placeholder="Введіть дату народження" min="1900-01-01" max="2009-01-01">
+				</div>
+			</div>	
+			<div class="form-group">
+				<label class="control-label col-sm-5" for="password">Пароль: </label>
+				<div class="col-sm-3">
+					<input type="Password" class="form-control" oninput="passStrength()" id="password" placeholder="Введіть пароль" name="password" pattern="[A-Za-z0-9]{4,20}" required>
+				</div>
+			</div>	
+			<div class="form-group">
+				<div class="col-sm-3 col-sm-offset-5">
+					<input type="Password" class="form-control" id="password2" placeholder="Повторіть пароль" name="password2" required>
+				</div>
+			</div>
+			<script type="text/javascript">
+				function validatePass(){
+					var pass, pass2;
+					pass = document.getElementById("password").value;
+					pass2 = document.getElementById("password2").value;
+					if (pass != pass2){
+						alert('Паролі не співпадають');
+						return false;
+					}
+					return true;
+				}
+			</script>
+			<script type="text/javascript">
+				function passStrength(){
+					var pass;
+					pass = document.getElementById("password").value;
+					if (pass.length < 4){
+						document.getElementById("password").style.borderColor = "red";
+					} else if (pass.length >= 4 && pass.length <= 6){
+						document.getElementById("password").style.borderColor = "orange";
+					} else if (pass.length > 6){
+						document.getElementById("password").style.borderColor = "green";
+					}
+				}
+			</script>
+		    <div class="form-group">        
+		      <div class="col-sm-5 col-sm-offset-3">
+		        <button type="submit" class="btn btn-default">Submit</button>
+		      </div>
+		    </div>
+		</form>
+	</div>
+
+</body>
